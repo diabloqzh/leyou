@@ -17,7 +17,7 @@ public class SpecParam {
     private Boolean unit;
     private Boolean generic;
     private Boolean searching;
-    private Boolean segemts;
+    private Boolean segments;
 
     @Override
     public String toString() {
@@ -30,7 +30,7 @@ public class SpecParam {
                 ", unit=" + unit +
                 ", generic=" + generic +
                 ", searching=" + searching +
-                ", segemts=" + segemts +
+                ", segemts=" + segments +
                 '}';
     }
 
@@ -98,11 +98,11 @@ public class SpecParam {
         this.searching = searching;
     }
 
-    public Boolean getSegemts() {
-        return segemts;
+    public Boolean getSegments() {
+        return segments;
     }
 
-    public void setSegemts(Boolean segemts) {
-        this.segemts = segemts;
+    public void setSegments(Boolean segments) {
+        this.segments = segments;
     }
 }

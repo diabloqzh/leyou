@@ -29,6 +29,26 @@ public class SpecGroupController {
     @PutMapping("/group")
     public ResponseEntity<Void> save(SpecGroup specGroup){
         this.service.saveSpecGroup(specGroup);
+        System.out.println(specGroup);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    @PostMapping("/group")
+    public ResponseEntity<Void> newSave(SpecGroup specGroup){
+        this.service.addSpecGroup(specGroup);
+        System.out.println(specGroup);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    @DeleteMapping("/group/{id}")
+    public ResponseEntity<Void> delete(@PathVariable(name = "id") Long id){
+        SpecGroup item=this.service.getById(id);
+        if(item==null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        try{
+            this.service.deleteById(id);
+        }catch(Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

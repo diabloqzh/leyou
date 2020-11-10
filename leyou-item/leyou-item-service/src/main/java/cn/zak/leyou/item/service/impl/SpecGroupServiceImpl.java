@@ -27,4 +27,20 @@ public class SpecGroupServiceImpl implements SpecGroupService {
     public void saveSpecGroup(SpecGroup specGroup) {
         this.mapper.updateByPrimaryKey(specGroup);
     }
+
+    @Override
+    public void addSpecGroup(SpecGroup specGroup) {
+        this.mapper.insert(specGroup);
+    }
+
+    @Override
+    public SpecGroup getById(Long id) {
+        SpecGroup specGroup = this.mapper.selectByPrimaryKey(id);
+        return specGroup;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        this.mapper.deleteByPrimaryKey(id);
+    }
 }

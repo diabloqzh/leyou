@@ -28,6 +28,7 @@ public class LeyouCorsConfig {
         configuration.addAllowedMethod("GET");
         configuration.addAllowedMethod("HEAD");
         configuration.addAllowedMethod("PUT");
+        configuration.addAllowedMethod("DELETE");
         //设定Access-Control-Allow-Headers
         configuration.addAllowedHeader("*");
         //设定Access-Control-Max-Age
