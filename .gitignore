@@ -1,2 +1,7 @@
 application.yml
-*.class
+/leyou-upload/target
+/leyou-item/leyou-item-service/target
+/leyou-item/leyou-item-interface/target
+/leyou-common/target
+/gateway/target
+/registry/target
