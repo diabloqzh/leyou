@@ -1,9 +1,6 @@
 package cn.zak.leyou.item.pojo;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "tb_spec_param")
 public class SpecParam {
@@ -12,9 +9,11 @@ public class SpecParam {
     private Long id;
     private Long cid;
     private Long groupId;
+    @Column(name = "`name`")
     private String name;
+    @Column(name = "`numeric`")
     private Boolean numeric;
-    private Boolean unit;
+    private String unit;
     private Boolean generic;
     private Boolean searching;
     private Boolean segments;
@@ -74,11 +73,11 @@ public class SpecParam {
         this.numeric = numeric;
     }
 
-    public Boolean getUnit() {
+    public String getUnit() {
         return unit;
     }
 
-    public void setUnit(Boolean unit) {
+    public void setUnit(String unit) {
         this.unit = unit;
     }
 

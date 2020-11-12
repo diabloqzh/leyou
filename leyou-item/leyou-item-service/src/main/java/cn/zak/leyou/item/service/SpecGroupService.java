@@ -14,5 +14,5 @@ public interface SpecGroupService {
 
     SpecGroup getById(Long id);
 
-    void deleteById(Long id);
+    void deleteById(java.lang.Long id);
 }

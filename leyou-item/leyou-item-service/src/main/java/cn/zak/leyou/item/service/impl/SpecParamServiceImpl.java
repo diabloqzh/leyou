@@ -22,4 +22,25 @@ public class SpecParamServiceImpl implements SpecGroupParamService {
         return this.mapper.selectByExample(example);
 
     }
+
+    @Override
+    public void saveNew(SpecParam specParam) {
+        this.mapper.insert(specParam);
+    }
+
+    @Override
+    public void save(SpecParam specParam) {
+        this.mapper.updateByPrimaryKey(specParam);
+    }
+
+    @Override
+    public SpecParam getById(Long id) {
+        SpecParam specParam = this.mapper.selectByPrimaryKey(id);
+        return specParam;
+    }
+
+    @Override
+    public void delete(Long id) {
+        this.mapper.deleteByPrimaryKey(id);
+    }
 }
