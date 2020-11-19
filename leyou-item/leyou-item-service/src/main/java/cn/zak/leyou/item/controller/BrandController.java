@@ -68,6 +68,15 @@ public class BrandController {
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }
     }
+    @GetMapping("/cid/{cid}")
+    public ResponseEntity<List<Brand>> getByCid(@PathVariable(name="cid",required = true) Integer cid){
+        List<Brand> list = this.brandService.getByCid(cid);
+        if(CollectionUtils.isEmpty(list)){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok(list);
+        }
+    }
     @GetMapping("/bid/{id}")
     public ResponseEntity<Brand> getById(@PathVariable(name = "id",required = true) Integer id){
         Brand brand= this.brandService.findById(id);

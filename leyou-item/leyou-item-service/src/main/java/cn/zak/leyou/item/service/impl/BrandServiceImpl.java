@@ -79,6 +79,12 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
+    public List<Brand> getByCid(Integer cid) {
+        List<Brand> list = this.brandMapper.getByCid(cid);
+        return list;
+    }
+
+    @Override
     public void removeById(Integer id) {
         this.brandMapper.deleteByPrimaryKey(id);
     }

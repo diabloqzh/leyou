@@ -24,6 +24,13 @@ public class SpecParamServiceImpl implements SpecGroupParamService {
     }
 
     @Override
+    public List<SpecParam> getByPojo(SpecParam specParam) {
+
+        List<SpecParam> list = this.mapper.select(specParam);
+        return list;
+    }
+
+    @Override
     public void saveNew(SpecParam specParam) {
         this.mapper.insert(specParam);
     }

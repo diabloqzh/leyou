@@ -10,4 +10,5 @@ public interface CategoryService {
     List<Category> findByPid(Long pid);
 
     List<Category> findByBid(Long bid);
+    List<String> findByIds(List<Long> ids);
 }

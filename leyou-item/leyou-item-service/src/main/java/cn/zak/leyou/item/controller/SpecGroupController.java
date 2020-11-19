@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,10 +21,10 @@ public class SpecGroupController {
     @GetMapping("/groups/{cid}")
     public ResponseEntity<List<SpecGroup>> getByCid(@PathVariable(name = "cid",required = true) Long cid){
         List<SpecGroup> result = this.service.getByCid(cid);
-        if(result!=null){
-            return ResponseEntity.ok(result);
-        }else{
+        if(CollectionUtils.isEmpty(result)){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }else{
+            return ResponseEntity.ok(result);
         }
     }
     @PutMapping("/group")

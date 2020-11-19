@@ -15,4 +15,6 @@ public interface SpecGroupParamService {
     SpecParam getById(Long id);
 
     void delete(Long id);
+
+    List<SpecParam> getByPojo(SpecParam specParam);
 }

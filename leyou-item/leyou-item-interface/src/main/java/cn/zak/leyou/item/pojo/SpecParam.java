@@ -16,7 +16,7 @@ public class SpecParam {
     private String unit;
     private Boolean generic;
     private Boolean searching;
-    private Boolean segments;
+    private String segments;
 
     @Override
     public String toString() {
@@ -97,11 +97,11 @@ public class SpecParam {
         this.searching = searching;
     }
 
-    public Boolean getSegments() {
+    public String getSegments() {
         return segments;
     }
 
-    public void setSegments(Boolean segments) {
+    public void setSegments(String segments) {
         this.segments = segments;
     }
 }

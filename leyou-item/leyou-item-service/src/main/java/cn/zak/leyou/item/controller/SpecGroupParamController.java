@@ -17,8 +17,12 @@ public class SpecGroupParamController {
     private SpecGroupParamService service;
 
     @GetMapping("/params")
-    public ResponseEntity<List<SpecParam>> getByGid(Long gid){
-        List<SpecParam> list=this.service.getByGid(gid);
+    public ResponseEntity<List<SpecParam>> getByGid(@RequestParam(value = "gid" ,required = false) Long gid,@RequestParam(value = "cid" ,required = false) Long cid){
+        List<SpecParam> list;
+        SpecParam specParam=new SpecParam();
+        specParam.setCid(cid);
+        specParam.setGroupId(gid);
+        list=this.service.getByPojo(specParam);
         if(null == list){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }else{

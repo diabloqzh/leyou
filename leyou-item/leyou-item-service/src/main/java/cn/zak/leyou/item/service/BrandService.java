@@ -17,4 +17,5 @@ public interface BrandService {
     void removeById(Integer id);
 
 
+    List<Brand> getByCid(Integer cid);
 }
