@@ -10,4 +10,6 @@ public interface SpuService {
     List<Spu> findAll();
 
     PageResult<SpuBo> getSpuByPage(String key, Integer page, String sortBy, Integer rows, Boolean desc, Boolean saleable);
+
+    Spu fingById(Long id);
 }

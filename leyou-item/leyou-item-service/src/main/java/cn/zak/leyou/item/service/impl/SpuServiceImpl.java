@@ -70,4 +70,9 @@ public class SpuServiceImpl implements SpuService {
         all.setTotalPage(info.getPages());
         return all;
     }
+
+    @Override
+    public Spu fingById(Long id) {
+        return this.mapper.selectByPrimaryKey(id);
+    }
 }
