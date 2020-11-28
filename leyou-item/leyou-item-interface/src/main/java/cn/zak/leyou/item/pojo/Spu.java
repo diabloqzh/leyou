@@ -118,7 +118,9 @@ public class Spu {
 
         return dateFormat.format(this.createTime);
     }
-
+    public void setCreateTime(Date createTime){
+        this.createTime=createTime;
+    }
     public void setCreateTime(String createTime) {
         DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date parse = null;
@@ -134,7 +136,9 @@ public class Spu {
         DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return dateFormat.format(this.lastUpdateTime);
     }
-
+    public void setLastUpdateTime(Date lastUpdateTime){
+        this.lastUpdateTime=lastUpdateTime;
+    }
     public void setLastUpdateTime(String lastUpdateTime) {
         DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date parse = null;

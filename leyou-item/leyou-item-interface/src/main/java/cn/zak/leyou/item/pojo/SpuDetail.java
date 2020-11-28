@@ -12,10 +12,10 @@ public class SpuDetail {
     private Long spuId;
     private String spu_id;
     private String description;
-    private String generic_spec;
-    private String special_spec;
-    private String packing_list;
-    private String after_service;
+    private String genericSpec;
+    private String specialSpec;
+    private String packingList;
+    private String afterService;
 
     @Override
     public String toString() {
@@ -23,10 +23,10 @@ public class SpuDetail {
                 "spuId=" + spuId +
                 ", spu_id='" + spu_id + '\'' +
                 ", description='" + description + '\'' +
-                ", generic_spec='" + generic_spec + '\'' +
-                ", special_spec='" + special_spec + '\'' +
-                ", packing_list='" + packing_list + '\'' +
-                ", after_service='" + after_service + '\'' +
+                ", genericSpec='" + genericSpec + '\'' +
+                ", specialSpec='" + specialSpec + '\'' +
+                ", packingList='" + packingList + '\'' +
+                ", afterService='" + afterService + '\'' +
                 '}';
     }
 
@@ -54,35 +54,35 @@ public class SpuDetail {
         this.description = description;
     }
 
-    public String getGeneric_spec() {
-        return generic_spec;
+    public String getGenericSpec() {
+        return genericSpec;
     }
 
-    public void setGeneric_spec(String generic_spec) {
-        this.generic_spec = generic_spec;
+    public void setGenericSpec(String genericSpec) {
+        this.genericSpec = genericSpec;
     }
 
-    public String getSpecial_spec() {
-        return special_spec;
+    public String getSpecialSpec() {
+        return specialSpec;
     }
 
-    public void setSpecial_spec(String special_spec) {
-        this.special_spec = special_spec;
+    public void setSpecialSpec(String specialSpec) {
+        this.specialSpec = specialSpec;
     }
 
-    public String getPacking_list() {
-        return packing_list;
+    public String getPackingList() {
+        return packingList;
     }
 
-    public void setPacking_list(String packing_list) {
-        this.packing_list = packing_list;
+    public void setPackingList(String packingList) {
+        this.packingList = packingList;
     }
 
-    public String getAfter_service() {
-        return after_service;
+    public String getAfterService() {
+        return afterService;
     }
 
-    public void setAfter_service(String after_service) {
-        this.after_service = after_service;
+    public void setAfterService(String afterService) {
+        this.afterService = afterService;
     }
 }

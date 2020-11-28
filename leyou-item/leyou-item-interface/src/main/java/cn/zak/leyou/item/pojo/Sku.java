@@ -95,10 +95,18 @@ public class Sku {
     }
 
     public String getCreateTime() {
+        String format = null;
         DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return df.format(this.createTime);
-    }
+        try {
+            format = df.format(this.createTime);
+        }catch (Exception e){
 
+        }
+        return format;
+    }
+    public void setCreateTime(Date createTime) {
+        this.createTime=createTime;
+    }
     public void setCreateTime(String createTime) {
         DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
@@ -106,14 +114,21 @@ public class Sku {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
     }
 
     public String getLastUpdateTime() {
+        String format = null;
         DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return df.format(this.lastUpdateTime);
-    }
+        try {
+            format=df.format(this.lastUpdateTime);
+        }catch (Exception e){
 
+        }
+        return format;
+    }
+    public void setLastUpdateTime(Date lastUpdateTime){
+        this.lastUpdateTime=lastUpdateTime;
+    }
     public void setLastUpdateTime(String lastUpdateTime) {
         DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {

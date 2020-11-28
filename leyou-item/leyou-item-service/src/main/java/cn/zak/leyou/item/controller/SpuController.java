@@ -3,6 +3,7 @@ package cn.zak.leyou.item.controller;
 import cn.zak.leyou.common.pojo.PageResult;
 import cn.zak.leyou.item.bo.SpuBo;
 import cn.zak.leyou.item.pojo.Spu;
+import cn.zak.leyou.item.pojo.SpuDetail;
 import cn.zak.leyou.item.service.SpuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,7 +37,16 @@ public class SpuController {
         }
     }
     @GetMapping("/detail/{id}")
+    public ResponseEntity<SpuDetail> findDetailBySpuId(@PathVariable(name = "id",required = true) long id){
+        SpuDetail detail=this.service.findDetailBySpuId(id);
+        if(detail==null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }else{
+            return ResponseEntity.ok(detail);
+        }
+    }
     public ResponseEntity<Spu> findById(@PathVariable(name = "id",required = true) Long id){
+
         Spu spu=this.service.fingById(id);
         if(spu==null){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();

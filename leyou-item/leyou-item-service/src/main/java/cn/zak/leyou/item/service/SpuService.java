@@ -3,6 +3,7 @@ package cn.zak.leyou.item.service;
 import cn.zak.leyou.common.pojo.PageResult;
 import cn.zak.leyou.item.bo.SpuBo;
 import cn.zak.leyou.item.pojo.Spu;
+import cn.zak.leyou.item.pojo.SpuDetail;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ public interface SpuService {
     PageResult<SpuBo> getSpuByPage(String key, Integer page, String sortBy, Integer rows, Boolean desc, Boolean saleable);
 
     Spu fingById(Long id);
+
+    SpuDetail findDetailBySpuId(long id);
 }
